@@ -8,6 +8,8 @@
 
 html[dir="rtl"] {
   text-align: right;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 html[dir="rtl"] .menu__list {
@@ -43,12 +45,22 @@ html[dir="rtl"] .footer__container {
   height: 50px;
   width: auto;
   object-fit: contain;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 body {
   font-family: 'Rubik', 'Inter', sans-serif;
   font-size: 1.1rem;
   color: #303a4d;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  perspective: 1000;
 }
 
 [class*="__container"] {
@@ -82,6 +94,8 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
+  contain: content;
+  will-change: transform;
 }
 
 /* ************HEADER************ */
@@ -93,6 +107,10 @@ body {
   width: 100%;
   background: #fff;
   z-index: 1000;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .header__container {
@@ -164,6 +182,8 @@ body {
 /* ****************PAGES**************** */
 .page__main {
   padding-bottom: 160px;
+  contain: content;
+  will-change: transform;
 }
 
 /* *****************HOME**************** */
@@ -171,6 +191,10 @@ body {
 .main {
   background: url("../Website-Images/20250504_2346_בית כפרי שמח_simple_compose_01jtegqy52fpsaepasrfjakv4h.png") center / cover no-repeat;
   min-height: 100vh;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .main__container {
@@ -180,6 +204,8 @@ body {
   align-items: center;
   text-align: center;
   padding-top: 19.188rem;
+  contain: content;
+  will-change: transform;
 }
 
 .main__caption {
@@ -232,12 +258,16 @@ body {
   gap: 1.5rem;
   padding-top: 8.75rem;
   padding-bottom: 8.75rem;
+  contain: content;
+  will-change: transform;
 }
 
 .about__image {
   position: relative;
   max-width: 552px;
   height: 614px;
+  contain: content;
+  will-change: transform;
 }
 
 .about__image img {
@@ -245,6 +275,11 @@ body {
   max-width: 100%;
   height: 100%;
   object-fit: cover;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  contain: strict;
 }
 
 .about__title {
@@ -395,6 +430,8 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  contain: content;
+  will-change: transform;
 }
 
 .outro__title {
@@ -416,6 +453,8 @@ body {
 
 .footer {
   line-height: 150%;
+  contain: content;
+  will-change: transform;
 }
 
 .footer__container {
@@ -425,6 +464,8 @@ body {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
+  contain: content;
+  will-change: transform;
 }
 
 .footer__policy {
@@ -517,7 +558,12 @@ body {
 /* ****************CONTACT PAGE****************/
 
 .main_contact {
-  background: url("../img/contact/background_placeholder.png") center / cover no-repeat;
+  background: url("../Website-Images/נוף.jpg") center / cover no-repeat;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  contain: content;
 }
 
 .contact__container {
@@ -526,6 +572,8 @@ body {
   gap: 109px;
   padding-top: 140px;
   padding-bottom: 140px;
+  contain: content;
+  will-change: transform;
 }
 
 .contact__title {
@@ -535,7 +583,7 @@ body {
   font-size: 40px;
 }
 
-.connect-contact {
+.contact__connect {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -543,39 +591,52 @@ body {
   margin-bottom: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid #e1e4eb;
+  contain: content;
+  will-change: transform;
 }
 
 .connect-contact__item {
   display: inline-flex;
   align-items: center;
   gap: 24px;
+  contain: content;
+  will-change: transform;
 }
 
-.connect-contant__type {
-  margin-bottom: 4px;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  line-height: 110%;
-  text-transform: uppercase;
-}
-
-.connect-contact__label {
-  font-size: 22px;
-  line-height: 150%;
-  letter-spacing: 0.02em;
+.connect-contact__icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .contact__links {
   display: flex;
   align-items: center;
   gap: 12px;
+  contain: content;
+  will-change: transform;
+}
+
+.contact__links img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .contact__text {
   max-width: 545px;
   font-size: 18px;
   line-height: 150%;
+  contain: content;
+  will-change: transform;
 }
 
 .contact__text p:not(:last-child) {
@@ -586,6 +647,8 @@ iframe {
   width: 100vw;
   height: 482px;
   filter: grayscale(100%);
+  contain: content;
+  will-change: transform;
 }
 
 /* **************REVIEWS PAGE**************** */
@@ -1184,6 +1247,17 @@ iframe {
 }
 
 @media (max-width: 47.999rem) {
+  .main__container,
+  .about__container,
+  .outro__container,
+  .footer__container {
+    contain: content;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+
   .main__container {
     padding-top: 6rem;
     padding-left: 1.5rem;
@@ -1492,4 +1566,33 @@ iframe {
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+/* Add smooth scrolling to all elements */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: no-preference) {
+  .menu__link,
+  .actions-header__button,
+  .about__button,
+  .outro__button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Optimize for mobile */
+@media (max-width: 47.999rem) {
+  .main__container,
+  .about__container,
+  .outro__container,
+  .footer__container {
+    contain: content;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
 }
